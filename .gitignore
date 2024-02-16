@@ -1,0 +1,6 @@
+# build directories
+out/
+build/
+
+# vscode
+.vscode/

@@ -1,0 +1,26 @@
+{
+  "name": "A Tour into Fuzzing Devcontainer",
+  "image": "fedora:latest",
+  "onCreateCommand": "dnf update -y && dnf upgrade -y && dnf install which git gh cmake ninja-build clang netcat xxd -y",
+  "customizations": {
+    "settings": {
+      "editor.renderWhitespace": "boundary",
+      "editor.wordWrap": "off",
+      "files.autoSave": "off",
+      "[json]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+      },
+      "[jsonc]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+      }
+    },
+    "extensions": [
+      "ms-vscode.cpptools",
+      "ms-vscode.cmake-tools",
+      "eamodio.gitlens",
+      "davidanson.vscode-markdownlint",
+      "EditorConfig.EditorConfig",
+      "esbenp.prettier-vscode"
+    ]
+  }
+}
