@@ -4,7 +4,11 @@
 
 #include <request.hpp>
 
-void ParseRequestFuzz(const uint8_t *raw) {
-  parse_request(raw);
+// Unit test with empty input can be added - aka nullptr
+
+void ParseRequestFuzz(const std::vector<uint8_t> &input) {
+  parse_request(input.data());
 }
-FUZZ_TEST(Requests, ParseRequestFuzz);
+FUZZ_TEST(Requests, ParseRequestFuzz)
+    .WithDomains(
+        fuzztest::NonEmpty(fuzztest::Arbitrary<std::vector<uint8_t>>()));

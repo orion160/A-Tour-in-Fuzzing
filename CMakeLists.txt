@@ -8,7 +8,7 @@ set_target_properties(base_TIF PROPERTIES
     CXX_EXTENSIONS NO
 )
 
-set(FUZZING_OPTIONS libFuzzing fuzztest)
+set(FUZZING_OPTIONS libFuzzing fuzztest fuzztest-unit)
 string(JOIN ", " FUZZING_OPTIONS_STR ${FUZZING_OPTIONS})
 set(ENABLE_FUZZING "OFF" CACHE STRING  "Enable fuzzing. Possible values are [${FUZZING_OPTIONS_STR}]")
 

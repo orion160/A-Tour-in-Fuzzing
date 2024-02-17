@@ -59,6 +59,15 @@
       }
     },
     {
+      "name": "x64-linux-fuzztest-unit",
+      "inherits": "x64-linux",
+      "hidden": false,
+      "cacheVariables": {
+        "ENABLE_FUZZING": "fuzztest-unit",
+        "CMAKE_BUILD_TYPE": "RelWithDebInfo"
+      }
+    },
+    {
       "name": "x64-linux-fuzztest",
       "inherits": "x64-linux",
       "hidden": false,
