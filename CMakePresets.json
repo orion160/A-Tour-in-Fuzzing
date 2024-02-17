@@ -29,7 +29,7 @@
         "rhs": "Linux"
       },
       "cacheVariables": {
-        "CMAKE_C_COMPILER": "clang",
+        "CMAKE_LINKER_TYPE": "LLD",
         "CMAKE_CXX_COMPILER": "clang++"
       }
     },
@@ -55,7 +55,7 @@
       "hidden": false,
       "cacheVariables": {
         "ENABLE_FUZZING": "libFuzzer",
-        "CMAKE_BUILD_TYPE": "Debug"
+        "CMAKE_BUILD_TYPE": "RelWithDebInfo"
       }
     }
   ]

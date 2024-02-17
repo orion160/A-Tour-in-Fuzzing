@@ -3,6 +3,8 @@
 #include <cstdio>
 #include <cstring>
 
+inline constexpr std::size_t MSG_SZ = 64;
+
 enum class request_type : uint8_t { HELLO = 0, GOODBYE = 1, MESSAGE = 2 };
 
 struct request_header {
@@ -12,15 +14,15 @@ struct request_header {
 };
 
 void parse_message(const request_header *h, const uint8_t *data) {
-  uint8_t msg[64];
-
-  // On release this is no-op
+  uint8_t msg[MSG_SZ];
 
   // Critical section
   // Remove conditional for unchecked bounds on memcpy
   // Discoverable via fuzzing
   // if (h->length < 64) {
   std::memcpy(msg, data, h->length);
+  msg[MSG_SZ - 1] = '\0';
+  std::printf("%s\n", msg);
   // }
 }
 

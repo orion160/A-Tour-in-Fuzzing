@@ -1,4 +1,4 @@
-add_executable(fuzz_parse_request)
-target_sources(fuzz_parse_request PRIVATE fuzz_parse_request.cpp)
-target_link_libraries(fuzz_parse_request PUBLIC -fsanitize=fuzzer PRIVATE request)
-target_compile_options(fuzz_parse_request PUBLIC -fsanitize=fuzzer)
+add_executable(parse_request_fuzz)
+target_sources(parse_request_fuzz PRIVATE parse_request_fuzz.cpp)
+target_compile_options(parse_request_fuzz PRIVATE -fsanitize=fuzzer)
+target_link_libraries(parse_request_fuzz PRIVATE -fsanitize=fuzzer request)
