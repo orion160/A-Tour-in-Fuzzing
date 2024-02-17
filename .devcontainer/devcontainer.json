@@ -1,7 +1,7 @@
 {
   "name": "A Tour into Fuzzing Devcontainer",
   "image": "fedora:latest",
-  "onCreateCommand": "dnf update -y && dnf upgrade -y && dnf install which git gh cmake ninja-build clang netcat xxd -y",
+  "onCreateCommand": "dnf update -y && dnf upgrade -y && dnf install which git gh cmake ninja-build llvm clang netcat xxd -y",
   "customizations": {
     "settings": {
       "editor.renderWhitespace": "boundary",

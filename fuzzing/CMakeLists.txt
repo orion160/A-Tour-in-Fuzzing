@@ -1,1 +1,1 @@
-add_subdirectory(libFuzzer)
+add_subdirectory(${ENABLE_FUZZING})
