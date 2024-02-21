@@ -33,14 +33,8 @@ Use `xxd` for getting encode/decode the payload
 
 #### libFuzzer
 
-Set `ENABLE_FUZZING=libFuzzer` or use `x64-linux-libFuzzer` preset.
+Set `ENABLE_FUZZING=libFuzzer` CMake variable or use `x64-linux-libFuzzer` preset.
 
 #### fuzztest
 
-Set `ENABLE_FUZZING=[fuzztest|<fuzztest-unit]` or use `x64-linux-fuzztest[-unit]` preset.
-
-##### Modes
-
-- Unit Test Mode: <>
-- Fuzzing Mode: <>
-- Compatibility Mode: <>
+Set `ENABLE_FUZZING=[fuzztest|fuzztest-unit]` CMake variable or use `x64-linux-fuzztest[-unit]` preset.
